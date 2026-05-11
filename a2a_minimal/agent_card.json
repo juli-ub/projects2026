@@ -1,0 +1,25 @@
+{
+  "name": "gemini-proxy-agent",
+  "description": "A minimal A2A agent that forwards requests to Google AI Studio (Gemini) and returns the response.",
+  "version": "0.1.0",
+  "capabilities": [
+    {
+      "type": "text_completion",
+      "model": "gemini-2.5-flash-lite",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "prompt": { "type": "string", "description": "User query or instruction" }
+        },
+        "required": ["prompt"]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "completion": { "type": "string", "description": "Gemini's answer" }
+        },
+        "required": ["completion"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "jsonrpc": "2.0",
+  "method": "message/send",
+  "params": {
+    "message": {
+      "kind": "message",
+      "messageId": "msg-001",
+      "role": "user",
+      "parts": [
+        {
+          "kind": "text",
+          "text": "Write a short haiku about a rainy city."
+        }
+      ]
+    }
+  }
+}
