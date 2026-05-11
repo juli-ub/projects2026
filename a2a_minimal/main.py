@@ -15,7 +15,7 @@ from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 
 # ------------------------------------------------------------
-# 1️⃣ Load configuration (API key, Agent Card, etc.)
+# 1 Loads configuration (API key, Agent Card, etc.)
 # ------------------------------------------------------------
 from dotenv import load_dotenv
 
@@ -32,7 +32,7 @@ AGENT_CARD_PATH = Path(__file__).parent / "agent_card.json"
 AGENT_CARD = json.loads(AGENT_CARD_PATH.read_text(encoding="utf-8"))
 
 # ------------------------------------------------------------
-# 2️⃣ Helper: call Gemini (Google AI Studio)
+# 2 Helper: calls Gemini (Google AI Studio)
 # ------------------------------------------------------------
 GEMINI_ENDPOINT = (
     "https://generativelanguage.googleapis.com/v1/models"
@@ -67,7 +67,7 @@ async def call_gemini(prompt: str) -> str:
         raise RuntimeError(f"Unexpected Gemini response: {data}")
 
 # ------------------------------------------------------------
-# 3️⃣ A2A request handler (POST /a2a)
+# 3 A2A request handler (POST /a2a)
 # ------------------------------------------------------------
 async def a2a_handler(request):
     """JSON‑RPC endpoint that receives a message, forwards it to Gemini,
@@ -75,7 +75,7 @@ async def a2a_handler(request):
     try:
         body = await request.json()
         # ----------------------------------------------------------------
-        # Extract the text part from the JSON‑RPC payload
+        # Extracts the text part from the JSON‑RPC payload
         # ----------------------------------------------------------------
         params = body.get("params", {})
         message = params.get("message", {})
@@ -137,7 +137,7 @@ async def a2a_handler(request):
 
 
 # ------------------------------------------------------------
-# 4️⃣ GET‑only viewer page (HTML UI)
+# 4 GET‑only viewer page (HTML UI)
 # ------------------------------------------------------------
 async def view_handler(request):
     """Serve a tiny HTML page that lets you type a prompt and see the answer."""
@@ -217,14 +217,14 @@ async def view_handler(request):
 
 
 # ------------------------------------------------------------
-# 5️⃣ Endpoint to serve the Agent Card (discovery)
+# 5 Endpoint to serve the Agent Card (discovery)
 # ------------------------------------------------------------
 async def card_handler(request):
     return JSONResponse(AGENT_CARD)
 
 
 # ------------------------------------------------------------
-# 6️⃣ Assemble the Starlette app
+# 6 Assemble the Starlette app
 # ------------------------------------------------------------
 routes = [
     Route("/a2a", endpoint=a2a_handler, methods=["POST"]),
@@ -245,8 +245,8 @@ app = Starlette(debug=True, routes=routes, middleware=middleware)
 
 
 # ------------------------------------------------------------
-# 7️⃣ Run with Uvicorn (or any ASGI server)
+# 7 Run with Uvicorn (or any ASGI server)
 # ------------------------------------------------------------
 if __name__ == "__main__":
-    # The server is deliberately single‑process & single‑thread – fine for a demo.
+    # The server is deliberately single‑process & single‑thread 
     uvicorn.run(app, host="0.0.0.0", port=8000)
