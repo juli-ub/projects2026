@@ -1,0 +1,15 @@
+client.py
+client2.py
+client3.py
+client4.py
+server.py
+mcp_agent_minimal.docx
+gpttest.py
+mcp_onefile2.py
+server_gpt.py
+.env
+.env.txt
+mcp_minimal_old/
+__pychache__/
+.venv/
+
