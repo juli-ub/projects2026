@@ -1,6 +1,0 @@
-python-dotenv>=1.0.0
-fastmcp>=0.2.1          # the library you mentioned (install with pip)
-openai==1.12.0          # official OpenAI client (for the LLM)
-uvicorn==0.30.1         # ASGI server that runs the FastMCP app
-httpx==0.27.0           # async HTTP client used by the client side
-google-genai
