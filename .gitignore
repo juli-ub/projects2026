@@ -1,0 +1,43 @@
+
+.env
+.env.txt
+
+__pychache__/
+.venv/
+
+# --- SICHERHEIT & PASSWÖRTER ---
+# Niemals API-Keys, Passwörter oder Tokens hochladen
+.env
+.env.local
+.env.*
+*.env
+config.json
+
+# --- PYTHON ---
+# Verhindert, dass kompilierte Python-Dateien hochgeladen werden
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+ENV/
+
+# --- VS CODE & EDITOREN ---
+# Ignoriert lokale Einstellungen von VS Code, die nicht ins Repo gehören
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# --- SYSTEMDATEIEN ---
+# Ignoriert automatische Betriebssystem-Dateien (Mac & Windows)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+thumbs.db
+Thumbs.db
