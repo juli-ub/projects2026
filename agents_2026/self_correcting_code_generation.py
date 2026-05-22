@@ -149,7 +149,7 @@ def run_agent():
                 f"{feedback}\n"
                 f"------------------------\n\n"
                 f"Please review your code, fix the logic or syntax errors, and output the updated version."
-                f"Advice 1:" #this advies fixes the error in test B because theboolean is interpreted as 1. This is intended so that the correction prompt leads to success. 
+                f"Advice 1:" #this advice fixes the error in test B because the boolean is interpreted as 1. This is intended so that the correction prompt leads to success. 
                 f"1. Ignore non-numeric data types (strings, booleans like True/False, null/None values). "
                 f"NOTE: In Python, booleans (True/False) are subclasses of integers. To prevent booleans "
                 f"from being counted as numbers, check types strictly (e.g., 'type(val) in (int, float)' "
