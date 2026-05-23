@@ -139,4 +139,42 @@ Verification & Search Findings: I performed a web search for "current Prime Mini
 
 Correction & Final Verified Answer: The current Prime Minister of the United Kingdom is Rishi Sunak.
 
+#========================================================================================================================================
+#========================================================================================================================================
+langgraph_conditional_edge.py
+==================================================
+RUNNING PROMPT: 'Calculate the age of the current President of France multiplied by 2.'
+==================================================
+
+--- START NODE ---
+
+--- PLAN NODE ---
+Plan: Plan: Search for the current President of France and their birthdate to determine their age.
+
+--- ROUTER NODE ---
+Decision: 'search' (Iteration: 1/3)
+
+--- SEARCH NODE ---
+Result: {'query': 'Calculate the age of the current President of France multiplied by 2.', 'follow_up_questions': None, 'answer': None, 'images': [], 'results': [{'url': 'https://en.wikipedia.org/wiki/Emmanuel_Macron', 'title': 'Emmanuel Macron - Wikipedia', 'content': 'Emmanuel Jean-Michel Frédéric Macron (born 21 December 1977) is a French politician who has served as President of France and Co-Prince of Andorra since 2017.', 'score': 0.572078, 'raw_content': None}], 'response_time': 1.08, 'request_id': 'e49f4c3f-b337-41a4-be83-22eb773bbcd5'}
+
+--- PLAN NODE ---
+Plan: Plan: Calculate Emmanuel Macron's current age based on his birthdate (21 December 1977) and then multiply it by 2.
+
+--- ROUTER NODE ---
+Decision: 'calc' (Iteration: 2/3)
+
+--- CALCULATOR NODE ---
+Result: * 2 = Error evaluating expression '* 2': invalid syntax (<string>, line 1)
+
+--- PLAN NODE ---
+Plan: Use the calculator to determine Emmanuel Macron's current age based on his birthdate (21 December 1977) and then multiply that age by 2.
+
+--- ROUTER NODE ---
+⚠️ Loop limit reached! Forcing state machine to finish.
+
+--- FINISH NODE ---
+#========================================================================================================================================
+#========================================================================================================================================
+
+
 
