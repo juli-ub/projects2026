@@ -178,6 +178,26 @@ Plan: Use the calculator to determine Emmanuel Macron's current age based on his
 --- FINISH NODE ---
 #========================================================================================================================================
 #========================================================================================================================================
+langgraph_multi_agent.py
+================================================================================
+User Prompt: Find out how many employees Apple has in 2024 and then calculate what that number would be if they laid off 5% of their workforce.
+================================================================================
 
+[Supervisor] Next Agent: search_agent
+[Supervisor] Reasoning: To determine the number of employees Apple has in 2024, I need to search for this information online.
+
+[Supervisor] Next Agent: math_agent
+[Supervisor] Reasoning: I have found the number of employees for Apple in 2024. Now I need to use the math_agent to calculate the 5% layoff.
+
+[Supervisor] Next Agent: responder
+[Supervisor] Reasoning: I have found the number of employees for Apple in 2024 and performed the calculation for a 5% layoff. Therefore, I can now respond to the user.
+
+------------------------------ Final Answer ------------------------------
+As of September 2024, Apple has approximately **164,000 employees**.
+
+If Apple were to lay off 5% of its workforce, that would equate to **8,200 employees**.
+================================================================================
+#========================================================================================================================================
+#========================================================================================================================================
 
 
