@@ -199,5 +199,31 @@ If Apple were to lay off 5% of its workforce, that would equate to **8,200 emplo
 ================================================================================
 #========================================================================================================================================
 #========================================================================================================================================
+langchain_multi_agent.py
+================================================================================
+User Prompt: Find out how many employees Apple has in 2024 and then calculate what that number would be if they laid off 5% of their workforce.
+================================================================================
+
+--- Orchestration Loop Iteration 1/2 ---
+[Supervisor Decision] Next Step: search_agent
+[Supervisor Reasoning] I need to find out how many employees Apple has in 2024. This requires a web search.
+[System] Running Search Agent...
+ -> Specialist decides to run tool: tavily_search_results_json with args: {'query': 'Apple employee count 2024'}
+ -> Tool output: [{'title': 'How Many People Work At Apple? (2025) - ElectroIQ', 'url': 'https://electroiq.com/stats/how-many-people-work-at-apple', 'content': 'The Engineering department is the largest, with 49,812 employees, representing 41% of Apple’s workforce.\n Apple employees on H-1B visas earn a median base salary of US$164,096/year.\n Apple’s 2024 revenue exceeded US$390 billion, reinforcing its position as the world’s most valuable brand. [...] As of September 2024, Apple had approximately 164,000 full-time employees worldwide, up from 161,000 in 2023.\n Apple has witnessed a more-than-345% increment in human resources since 2009, having hired more than 127,000 new people during this timeframe.\n Apple employs some 90,000 persons in the U.S. and plans to hire another 20,000 domestically.\n The San Francisco Bay Area is the largest employment centre for Apple, representing 15,043 workers in San Francisco, 6,643 in Cupertino, and 4,848 in San Jose.\n Austin, TX (6,468) and New York, NY (3,716) are the primary establishments outside California.\n Apple says that 1.9 million U.S. jobs are supported through its app ecosystem, a 325,000 increase in just two-and-a-half years. [...] ## Conclusion\n\nApple’s workforce has continued to increase over the years, and so has the expansion and innovation of the company. From efficiency to diversity and future avenues for growth, Apple still holds a remarkable workforce standing in the technology arena.\n\nShared On:\n\n### Sources\n\nApple\n\nBacklinko\n\nMacrotrends\n\nUnifygtm\n\nAltindex\n\nStatista\n\n### FAQ.\n\nHow many people work at Apple in 2024?\n\nAs of September 2024, there are around 164,000 full-time employees across the globe, a number that had reached 161,000 in 2023. This constitutes an increase of well over 345% since 2009, when the company had only 36,800 employees.\n\nWhere are most Apple employees located?', 'score': 0.9998104}, {'title': 'How many employees does Apple have? A deeper look at ...', 'url': 'https://finance.yahoo.com/news/many-employees-does-apple-deeper-150700096.html', 'content': "Based on 120,485 Apple employees (which would be equivalent to about its headcount of about 123,000 full-time employees in 2017), 41% were in engineering, followed by business management (15%), sales and support (9%), marketing and product (7%), operations (7%), finance and administration (6%), information technology (4%), consulting (3%), other (5%), and a remaining 3% that Unify didn’t identify.\n\nBy comparison, in 2026, Nvidia had 42,000 employees across 38 countries, of which 31,000 were involved in research and development and 11,000 in sales, marketing, operations, and administrative positions.\n\nMore on Apple:\n\n   Tim Cook's net worth: The Apple CEO's stock & wealth in 2025\n\n   Steve Wozniak’s net worth: The Apple cofounder’s wealth in 2025", 'score': 0.9995987}]
+[Search Agent Result] As of September 2024, Apple has approximately 164,000 employees. If they were to lay off 5% of their workforce, that would be 8,200 employees, leaving them with 155,800 employees.
+
+--- Orchestration Loop Iteration 2/2 ---
+[Supervisor Decision] Next Step: responder
+[Supervisor Reasoning] The search agent has provided the number of Apple employees in 2024 and the calculation for a 5% layoff. Therefore, no further tools are needed.
+
+--- Compiling Final Answer ---
+
+------------------------------ Final Answer ------------------------------
+As of September 2024, Apple has approximately **164,000 employees**.
+
+If Apple were to lay off 5% of its workforce, this would amount to **8,200 employees**. This would leave them with a workforce of **155,800 employees**.
+================================================================================
+#========================================================================================================================================
+#========================================================================================================================================
 
 
