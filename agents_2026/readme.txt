@@ -214,7 +214,7 @@ User Prompt: Find out how many employees Apple has in 2024 and then calculate wh
 
 --- Orchestration Loop Iteration 2/2 ---
 [Supervisor Decision] Next Step: responder
-[Supervisor Reasoning] The search agent has provided the number of Apple employees in 2024 and the calculation for a 5% layoff. Therefore, no further tools are needed.
+[Supervisor Reasoning] The search agent has provided the number of Apple employees in 2024 and the calculation for a 5% layoff. Therefore, no further tools are needed.  #Safety was built-in for only 2 LLM calls, should be increased to 3-4 to allow for the second agent/tool to be called.
 
 --- Compiling Final Answer ---
 
@@ -236,7 +236,7 @@ langchain_multi_agent_react.py
 [Search Agent Result] [{'type': 'text', 'text': 'As of September 2024, Apple has approximately 164,000 employees. If they laid off 5% of their workforce, that would be 8,200 employees, resulting in a total of 155,800 employees.', 'extras': {'signature': ...'}}]
 --- Orchestration Loop Iteration 2/3 ---
 [Supervisor Decision] Next Step: responder
-[Supervisor Reasoning] The search agent has already provided the number of Apple employees in 2024 and calculated the number after a 5% layoff. All necessary information is available to answer the user's prompt. #Changing "Do not call an agent if its task has already been fully completed" to "for calculations always call 'math_agent" like in earlier programs would                                                                                                                                                                                                                     #set up the supervisor to call the 'math_agent' and its 'calculate' tool as well."
+[Supervisor Reasoning] The search agent has already provided the number of Apple employees in 2024 and calculated the number after a 5% layoff. All necessary information is available to answer the user's prompt. #Changing "Do not call an agent if its task has already been fully completed" to "for calculations always call 'math_agent'" like in earlier programs would                                                                                                                                                                                                                     #set up the supervisor to call the 'math_agent' and its 'calculate' tool as well.
 --- Compiling Final Answer ---
 ------------------------------ Final Answer ------------------------------
 As of September 2024, Apple has approximately 164,000 employees.
