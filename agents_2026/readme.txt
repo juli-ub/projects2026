@@ -327,3 +327,19 @@ The evolution of Human-in-the-loop (HITL) AI workflows marks a significant shift
 ##################################################
 #========================================================================================================================================
 #========================================================================================================================================
+ python self_rag.py
+[System] Initializing Models & Vector Store...
+
+--- Processing Query: 'Who was the Lunar Module Pilot on Apollo 11?' ---
+[Agent Step 1] Retrieving documents from FAISS...
+[Agent Step 2] Grading document relevance...
+  - Chunk 1: RELEVANT
+  - Chunk 2: IRRELEVANT
+[Agent Step 4] Generating draft response...
+[Agent Step 5] Running hallucination check...
+  - Response passed validation. No hallucinations detected.
+
+[Final Agent Answer]:
+Buzz Aldrin
+#========================================================================================================================================
+#========================================================================================================================================
