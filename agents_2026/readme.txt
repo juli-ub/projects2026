@@ -343,3 +343,24 @@ The evolution of Human-in-the-loop (HITL) AI workflows marks a significant shift
 Buzz Aldrin
 #========================================================================================================================================
 #========================================================================================================================================
+agent_database_tool.py
+[Scenario 1: General Question]
+User: What causes solar eclipses?
+Agent Response: A solar eclipse occurs when the Moon passes between the Sun and Earth, and the Moon fully or partially blocks ("occults") the Sun. This can happen in a few different ways:
+
+*   **Total solar eclipse:** The Moon completely covers the Sun. This is only visible from a small area on Earth where the Moon's shadow (umbra) falls.
+*   **Partial solar eclipse:** The Moon only covers part of the Sun. This is visible from a wider area where the Moon's shadow (penumbra) falls.
+*   **Annular solar eclipse:** The Moon is farther away from Earth in its orbit, so it appears smaller than the Sun. This means it can't completely cover the Sun, leaving a "ring of fire" visible.
+
+Solar eclipses can only happen during the New Moon phase, when the Moon is between the Earth and the Sun. However, they don't happen every New Moon because the Moon's orbit is tilted slightly with respect to Earth's orbit around the Sun. This tilt means that most of the time, the Moon's shadow passes above or below the Earth.
+
+[Scenario 2: Database Query]
+User: How many Nebula Laptops do we currently have, and how much are they?
+Agent Response: The Nebula Laptop is currently in stock, with 5 units available. The price is $1299.50 per unit.
+
+[Scenario 3: Product Not in Database]
+User: Can you look up if we have solar chargers in stock?
+Agent Response: I am sorry, but we do not have any solar chargers in stock.
+#========================================================================================================================================
+#========================================================================================================================================
+
