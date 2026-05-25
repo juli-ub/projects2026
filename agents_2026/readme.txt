@@ -245,3 +245,52 @@ If Apple were to lay off 5% of its workforce, that would equate to 8,200 employe
 ================================================================================
 #========================================================================================================================================
 #========================================================================================================================================
+hitl_agent_langgraph.py
+Starting agent workflow...
+
+--- [Node: Drafting Content via Gemini] ---
+
+--- [Node: Human Review Node] ---
+
+==================================================
+HUMAN INTERVENTION REQUIRED
+==================================================
+Instruction: Please review this draft. Enter 'approve' to proceed, or write feedback to request modifications.
+Draft:       Human-AI integration is a foundational element for the future, not a temporary phase. "Human-in-the-loop" systems will be crucial for AI accuracy, ethical decision-making, and adaptability as AI advances. This symbiotic relationship will see AI handle complex tasks, while human intelligence provides essential oversight, context, and nuanced understanding.
+==================================================
+
+Your Response: consider this info: Reinforcement learningRL is a ML paradigm in which an agent learned optimal behavior through interactions with its environment, guided by feedback in the form of rewards or penalties [35]. When the reward function was difficult or infeasible to specify explicitly, HITL-AI approaches offer a compelling alternative 
+#from: https://www.sciencedirect.com/science/article/pii/S2666792426000065
+
+
+Resuming workflow with your feedback...
+
+--- [Node: Human Review Node] ---
+
+--- [Node: Modifying Draft via Gemini] ---
+
+--- [Node: Human Review Node] ---
+
+==================================================
+HUMAN INTERVENTION REQUIRED
+==================================================
+Instruction: Please review this draft. Enter 'approve' to proceed, or write feedback to request modifications.
+Draft:       Human-AI integration is foundational, not temporary. "Human-in-the-loop" (HITL) systems are crucial for AI accuracy, ethical decision-making, and adaptability. This symbiotic relationship allows AI to handle complex tasks, while human intelligence provides essential oversight, context, and nuanced understanding. HITL approaches are a compelling alternative when reward functions are difficult to specify, as in reinforcement learning.
+==================================================
+
+Your Response: approve
+
+Resuming workflow with your feedback...
+
+--- [Node: Human Review Node] ---
+
+--- [Node: Publishing Content] ---
+
+Workflow Completed!
+
+##################################################
+PUBLISHED RESPONSE:
+Human-AI integration is foundational, not temporary. "Human-in-the-loop" (HITL) systems are crucial for AI accuracy, ethical decision-making, and adaptability. This symbiotic relationship allows AI to handle complex tasks, while human intelligence provides essential oversight, context, and nuanced understanding. HITL approaches are a compelling alternative when reward functions are difficult to specify, as in reinforcement learning.
+##################################################
+#========================================================================================================================================
+#========================================================================================================================================
