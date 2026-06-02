@@ -443,5 +443,44 @@ Based on the dependencies, the following teams need to be alerted:
 Breaking changes to the Auth Service will directly impact user login, session management, and the Payment Service. This, in turn, will affect transaction processing, the Billing DB, the Notification Service, confirmation emails, and event triggering. Therefore, **Team Alpha**, **Team Beta**, and **Team Gamma** must be alerted.
 #===================================================================================================
 #===================================================================================================
+ython agent_class_memory.py
+Agent initialized. You can ask it to multiply numbers, or just chat with it.
+Type 'exit' to quit.
 
+You: How tall is Lebron James?        
+Agent: LeBron James is 6'9" (2.06 m) tall.
+
+You: Take that metric number and multiply by 2
+
+[System: Agent decided to call the multiplication tool...]
+[System: Tool run -> multiply_numbers({'a': 2, 'b': 2}) = 4]
+Agent: 2.06 multiplied by 2 is 4.12. Using the multiplication tool, and rounding 2.06 to 2, the answer is 4.
+
+You: exit
+#===================================================================================================
+#===================================================================================================
+python Multi_agent_with_call_limit.py
+Initializing collaborative agent run...
+
+[Starting Story Seed]: Once upon a time, a deep space probe picked up an audio signal consisting of only four musical notes.
+
+[Tool: Calling Agent B | Pydantic Counter: 1/4]
+-> Message passed to Agent A: "Once upon a time, a deep space probe picked up an audio signal consisting of only four musical notes. The notes repeated in a seemingly random pattern, yet possessed an underlying mathematical structure that intrigued xenolinguists back on Earth."
+
+[Tool: Calling Agent A | Pydantic Counter: 2/4]
+-> Message passed to Agent B: "The xenolinguists discovered that the apparent randomness of the musical notes was actually a complex cipher, with each repetition revealing a new layer of meaning."
+
+[Tool: Calling Agent B | Pydantic Counter: 3/4]
+-> Message passed to Agent A: "The xenolinguists discovered that the apparent randomness of the musical notes was actually a complex cipher, with each repetition revealing a new layer of meaning. The team worked tirelessly, translating the alien melody into a coherent message that spoke of a long-lost cosmic library."
+
+[Tool: Calling Agent A | Pydantic Counter: 4/4]
+-> Message passed to Agent B: "The xenolinguists discovered that the apparent randomness of the musical notes was actually a complex cipher, with each repetition revealing a new layer of meaning. The team worked tirelessly, translating the alien melody into a coherent message that spoke of a long-lost cosmic library. Suddenly, a shimmering portal opened in the center of the translation chamber, revealing a star-filled nebula unlike any charted by human or alien astronomers."
+
+==========================================
+APPLICATION ABORTED - LIMIT REACHED
+==========================================
+Final Output:
+The xenolinguists discovered that the apparent randomness of the musical notes was actually a complex cipher, with each repetition revealing a new layer of meaning. The team worked tirelessly, translating the alien melody into a coherent message that spoke of a long-lost cosmic library. Suddenly, a shimmering portal opened in the center of the translation chamber, revealing a star-filled nebula unlike any charted by human or alien astronomers. The portal pulsed with an otherworldly energy, beckoning the xenolinguists towards the unknown wonders it contained.
+#===================================================================================================
+#===================================================================================================
 
