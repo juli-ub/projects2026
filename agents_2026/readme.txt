@@ -483,4 +483,22 @@ Final Output:
 The xenolinguists discovered that the apparent randomness of the musical notes was actually a complex cipher, with each repetition revealing a new layer of meaning. The team worked tirelessly, translating the alien melody into a coherent message that spoke of a long-lost cosmic library. Suddenly, a shimmering portal opened in the center of the translation chamber, revealing a star-filled nebula unlike any charted by human or alien astronomers. The portal pulsed with an otherworldly energy, beckoning the xenolinguists towards the unknown wonders it contained.
 #===================================================================================================
 #===================================================================================================
+python agent_databse_decision_prompt.py
+
+[Scenario 1: Saving New Statement]
+User: James lives in Berlin
+Agent Action/Response: OK. I've recorded that James lives in Berlin as of today, June 2, 2026.
+
+[Scenario 2: Chronological Reasoning]
+User: 5 years ago James lived in Barcelona, does he still live there?
+Agent Response:
+Let's break down the timeline:
+
+1.  **June 2, 2021**: You stated that James lived in Barcelona.
+2.  **June 2, 2024**: Our records show that James lived in Paris. This updates his location from Barcelona.
+3.  **June 2, 2026**: Our most recent record, from today, states that James lives in Berlin.
+#===================================================================================================
+#===================================================================================================
+
+Based on this, James does not live in Barcelona anymore. He currently lives in Berlin.
 
