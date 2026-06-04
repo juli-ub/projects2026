@@ -1,0 +1,13 @@
+{
+  "world": {
+    "rows": 6,
+    "cols": 6,
+    "terminal": [[5,5]],
+    "obstacles": [[2,2],[2,3],[3,2]],
+    "slip_prob": 0.15,
+    "step_cost": -0.05,
+    "treasure_bonus": 8
+  },
+  "gamma": 0.95,
+  "max_iters": 500
+}
