@@ -76,6 +76,25 @@ Based on the dependencies, the following teams need to be alerted:
 3.  **Team Gamma:** This team is responsible for the Notification Service. While indirectly affected through the Payment Service, they still need to be aware of potential impacts on their service's triggers.
 
 **Summary of Impact:**
-#========================================================================================================================================
-#========================================================================================================================================
 Breaking changes to the Auth Service will directly impact user login, session management, and the Payment Service. This, in turn, will affect transaction processing, the Billing DB, the Notification Service, confirmation emails, and event triggering. Therefore, **Team Alpha**, **Team Beta**, and **Team Gamma** must be alerted.
+#========================================================================================================================================
+#========================================================================================================================================
+python hier_hybrid_rag.py
+======================================
+User Query: 'What happens if I eat too much sugar?'
+======================================
+
+[Stage 1] Querying parent categories...
+ -> Chosen Category: 'Health' (Score: 1.0000)
+[Stage 2] Searching within 'Health' leaves...
+ -> Found Chunk [health_1]: "High intake of refined sugars triggers insulin resistance, chronic cel..." (Score: 1.0000)
+
+[RAG] Generating response with LLM...
+================ ANSWER ================
+The answer is:
+
+**High intake of refined sugars triggers insulin resistance, chronic cell inflammation, and diabetes**
+
+When we consume refined sugars, they are broken down into glucose, which is then absorbed into the bloodstream. Insulin, a hormone produced by the pancreas, helps regulate blood sugar levels by allowing glucose to enter cells. However, when we consume refined sugars, our bodies are forced to
+#========================================================================================================================================
+#========================================================================================================================================
